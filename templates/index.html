@@ -6,12 +6,26 @@
 </head>
 <body>
 	<div class="wrap">
-   <div class="search">
-      <input type="text" class="searchTerm" placeholder="enter submission url to predict flair">
-      <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
-     </button>
-   </div>
-</div>
+	   <div class="search">
+
+	      <div>
+	      	<input type="text" class="searchTerm" placeholder="enter submission url to predict flair" style="text-align: center;">
+	   	 	<button type="submit" class="searchButton" >Predict</button>
+
+         	<!-- <i class="fa fa-search"></i> -->
+          </div>
+
+          <form action = {{url_for("predict")}} method="POST">
+				<label for="input"><h4>Write Your Message:</h4></label>
+				 <textarea class="form-control" rows="5" id="comment" name="message"></textarea>
+				 <br>
+				<center>
+					<input type="submit" class="btn btn-info" value="predict">
+				</center>
+		</form>
+     
+	   </div>
+
+	</div>
 </body>
 </html>
